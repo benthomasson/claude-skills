@@ -10,9 +10,14 @@ Claude skills are detailed reference guides that help Claude Code understand and
 ## Available Skills
 
 - **[gcalcli](skills/gcalcli/SKILL.md)** - Google Calendar CLI with meeting notes and attachment access
+  - Based on: [insanum/gcalcli](https://github.com/insanum/gcalcli)
+  - Custom fork: [shanemcd/gcalcli](https://github.com/shanemcd/gcalcli)
 - **[gcmd](skills/gcmd/SKILL.md)** - Google Drive file management and markdown export
+  - Repository: [shanemcd/gcmd](https://github.com/shanemcd/gcmd)
 - **[jirahhh](skills/jirahhh/SKILL.md)** - Jira issue creation, updates, and management
+  - Repository: [shanemcd/jirahhh](https://github.com/shanemcd/jirahhh)
 - **[pr-review](skills/pr-review-skill/SKILL.md)** - GitHub PR review workflow with automated analysis
+  - Uses: [GitHub CLI](https://cli.github.com/)
 
 ## Installation and Setup
 
@@ -144,6 +149,21 @@ claude-skills/
         ├── SKILL.md
         └── scripts/           # Python utilities
 ```
+
+## Tool Repositories
+
+These skills are based on the following open-source tools:
+
+- **gcalcli**: Google Calendar command line interface
+  - Original: [insanum/gcalcli](https://github.com/insanum/gcalcli)
+  - Custom fork with attachment support: [shanemcd/gcalcli](https://github.com/shanemcd/gcalcli)
+- **gcmd**: Google Drive command line tool
+  - Repository: [shanemcd/gcmd](https://github.com/shanemcd/gcmd)
+- **jirahhh**: Jira command line interface
+  - Repository: [shanemcd/jirahhh](https://github.com/shanemcd/jirahhh)
+- **GitHub CLI**: Official GitHub command line tool
+  - Repository: [cli/cli](https://github.com/cli/cli)
+  - Website: [cli.github.com](https://cli.github.com/)
 
 ## License
 
