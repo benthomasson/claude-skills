@@ -34,9 +34,37 @@ Follow the official installation guide at [docs.anthropic.com/claude-code](https
 
 ### 3. Configure Skills for Claude Code
 
-To make these skills available to Claude Code, you need to add this repository to your Claude Code memory. There are two approaches:
+To make these skills available to Claude Code, you have several options:
 
-#### Option A: Add to CLAUDE.md (Recommended)
+#### Option A: Global Skills Directory (Recommended)
+
+Copy or symlink the skills to your global Claude Code skills directory:
+
+```bash
+# Create the global skills directory
+mkdir -p ~/.claude/skills
+
+# Copy skills (or create symlinks)
+cp -r /path/to/claude-skills/skills/* ~/.claude/skills/
+# OR create symlinks:
+# ln -s /path/to/claude-skills/skills/* ~/.claude/skills/
+```
+
+Claude Code will automatically discover and load these skills from `~/.claude/skills/`.
+
+#### Option B: Project-Specific Skills
+
+For project-specific access, create a `.claude/skills` directory in your project:
+
+```bash
+# In your project directory
+mkdir -p .claude/skills
+cp -r /path/to/claude-skills/skills/* .claude/skills/
+# OR create symlinks:
+# ln -s /path/to/claude-skills/skills/* .claude/skills/
+```
+
+#### Option C: Add to CLAUDE.md
 
 If you have an existing project with a `CLAUDE.md` file, add a reference to these skills:
 
@@ -54,7 +82,7 @@ Available skills:
 See individual SKILL.md files for complete documentation.
 ```
 
-#### Option B: Use Skills Directly
+#### Option D: Use Skills Directly
 
 Navigate to this repository and start Claude Code from here:
 
